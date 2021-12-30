@@ -20,6 +20,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.haeyum.figmaphoto.R
 import com.haeyum.figmaphoto.scenarios.intro.ui.theme.FigmaPhotoTheme
+import com.haeyum.figmaphoto.scenarios.login.LoginActivity
 import com.haeyum.figmaphoto.scenarios.register.RegisterActivity
 import com.haeyum.figmaphoto.utils.ToastHelper
 
@@ -28,7 +29,7 @@ class IntroActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             Screen(
-                onClickLogin = { ToastHelper.showToast("LOG IN") },
+                onClickLogin = { startActivity(Intent(this, LoginActivity::class.java)) },
                 onClickRegister = { startActivity(Intent(this, RegisterActivity::class.java)) }
             )
         }

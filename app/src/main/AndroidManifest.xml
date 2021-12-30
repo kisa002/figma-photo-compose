@@ -11,6 +11,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FigmaPhoto">
         <activity
+            android:name=".scenarios.login.LoginActivity"
+            android:exported="false"
+            android:label="@string/title_activity_login"
+            android:theme="@style/Theme.FigmaPhoto.NoActionBar" />
+        <activity
             android:name=".scenarios.register.RegisterActivity"
             android:exported="false"
             android:label="@string/title_activity_register"
