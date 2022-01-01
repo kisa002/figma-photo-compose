@@ -1,5 +1,6 @@
 package com.haeyum.figmaphoto.scenarios.login
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -23,6 +24,7 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.haeyum.figmaphoto.MainActivity
 import com.haeyum.figmaphoto.R
 import com.haeyum.figmaphoto.scenarios.login.ui.theme.FigmaPhotoTheme
 import com.haeyum.figmaphoto.utils.ToastHelper
@@ -37,6 +39,7 @@ class LoginActivity : ComponentActivity() {
                 onClickBack = {
                     finish()
                 }, onClickNext = { email, password ->
+                    startActivity(Intent(this, MainActivity::class.java))
                     ToastHelper.showToast("email: $email\npassword: $password")
                 }
             )
